@@ -8,6 +8,10 @@ app.get('/', function(request, response){
 	response.sendFile(__dirname + "/bmiCalculator.html");
 });
 
+app.get('/about', function(request, response){
+	response.send("Hello World!!");
+});
+
 app.post('/bmicalculator', function(request, response){
 	var num1 = parseFloat(request.body.weight);
 	var num2 = parseFloat(request.body.height);
